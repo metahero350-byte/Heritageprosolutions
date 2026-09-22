@@ -1,23 +1,24 @@
-HERITAGE CUSTOM ELEMENT — GITHUB HOSTING
+HERITAGE V3 — CLEAN WEALTH CATEGORIES PLACEMENT
 
-Upload `heritage-landing.js` to the ROOT of your existing GitHub repo:
-metahero350-byte/Heritageprosolutions
+WHAT CHANGED
+- Removed the large 8 Wealth Building Categories block from the footer.
+- Added a compact teaser directly before The Heritage Blueprint.
+- Footer now has one simple "8 Wealth Building Categories" link under Heritage.
+- Both the teaser button and footer link open the existing full guide modal.
 
-After GitHub Pages refreshes, the script URL should be:
+DEPLOY
+1. In GitHub, open your Heritageprosolutions repository.
+2. Replace the existing root file:
+   heritage-landing.js
+   with the new heritage-landing.js in this ZIP.
+3. Commit the change.
+4. Wait 1–3 minutes for GitHub Pages to update.
+5. Hard-refresh your Wix test page:
+   Ctrl + Shift + R
 
+WIX DOES NOT NEED TO CHANGE
+Server URL remains:
 https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing.js
 
-WIX STUDIO:
-1. Select the existing Custom Element.
-2. Click Choose Source.
-3. Select Server URL.
-4. Paste:
-   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing.js
-5. Tag name:
-   heritage-landing
-6. Save.
-7. Test Site / Publish test page.
-8. Hard refresh the test page if needed (Ctrl+Shift+R).
-
-The component uses Wix CDN URLs for the 8 main imagery files, so you do NOT
-need to add those images to GitHub for this custom-element deployment.
+Tag remains:
+heritage-landing
