@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heritage Protection Solutions</title>
+<meta name="description" content="Financial clarity for families and business owners. Protect what you've built. Prepare what comes next.">
+<style>
+:root{
+ --root:#21150f;--bark:#553223;--green:#244d37;--green2:#3f6a46;--green3:#1b3d2c;
+ --leaf:#768744;--clay:#b96b43;--harvest:#d58e3f;--gold:#d8a94d;--gold2:#f0ce73;
+ --ivory:#f6ead9;--paper:#fffaf2;--ink:#261b14;--muted:#75675c;--line:#dfcdb8;
+ --shadow:0 18px 48px rgba(22,42,33,.12);--radius:22px;--serif:Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit} button{font:inherit} img{display:block;max-width:100%}.wrap{width:min(1180px,calc(100% - 44px));margin:auto}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,58,46,.08)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:13px}.brand svg{width:45px;height:45px}.brand-name{font-family:var(--serif);font-size:20px;letter-spacing:.04em;line-height:1}.brand-name small{font-family:Arial,sans-serif;font-size:9px;display:block;letter-spacing:.22em;margin-top:5px;color:var(--muted)}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:700}.navlinks a{position:relative}.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--gold);transition:.25s}.navlinks a:hover:after{right:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:9px;padding:14px 20px;font-weight:800;cursor:pointer;transition:.22s ease}.btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 26px rgba(11,58,46,.19)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(11,58,46,.25)}.btn-light{background:#fff;color:var(--green);border:1px solid var(--line)}.btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.08)}
+.hero{background:linear-gradient(90deg,var(--ivory) 0 47%,rgba(246,242,233,.88) 53%,rgba(246,242,233,.08) 76%),url('assets/hero.jpg') center right/cover no-repeat;min-height:690px;display:flex;align-items:center}.hero-copy{max-width:650px;padding:88px 0}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:900}.hero h1{font:700 clamp(46px,5.2vw,76px)/.98 var(--serif);margin:16px 0 22px;letter-spacing:-.035em}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{font-size:18px;max-width:600px;color:#3f4944}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.trustline{display:flex;gap:24px;flex-wrap:wrap;margin-top:34px;color:#55615c;font-size:12px;font-weight:700}.trustline span:before{content:"◆";color:var(--gold);margin-right:8px;font-size:8px;vertical-align:2px}
+section{padding:92px 0}.section-head{max-width:760px;margin-bottom:40px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.section-head h2{font:700 clamp(38px,4vw,56px)/1.05 var(--serif);margin:10px 0 14px;letter-spacing:-.025em}.section-head p{margin:0;color:var(--muted);font-size:17px}
+.goals{background:#fff}.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.goal{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.28s ease;box-shadow:0 5px 16px rgba(20,35,29,.035)}.goal:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#cfbd92}.goal-img{height:220px;background-size:cover;background-position:center;position:relative}.goal-img:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(5,25,19,.38))}.goal-body{padding:24px}.goal h3{font:700 27px/1.08 var(--serif);margin:0 0 9px}.goal p{color:var(--muted);font-size:14px;margin:0 0 16px}.explore{background:none;border:0;padding:0;color:var(--green);font-weight:900;cursor:pointer}.explore:hover{color:var(--gold)}
+.process{background:var(--ivory)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;position:relative}.steps:before{content:"";position:absolute;left:7%;right:7%;top:29px;height:1px;background:#cdbb92}.step{position:relative;background:var(--ivory);padding-right:18px}.step-no{width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;position:relative;z-index:2;border:7px solid var(--ivory)}.step h3{font:700 29px var(--serif);margin:17px 0 6px}.step p{color:var(--muted);margin:0}
+.help-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.help-card{border-top:4px solid var(--gold);padding:28px 24px;border-radius:10px;background:#fff;box-shadow:0 10px 24px rgba(16,36,28,.06);transition:.25s}.help-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.help-card h3{font:700 30px var(--serif);margin:0 0 8px}.help-card p{color:var(--muted);font-size:14px}.help-card ul{padding-left:18px;margin-bottom:0;color:#4a5550;font-size:13px;line-height:1.8}
+.blueprint{padding:0;background:var(--green);color:#fff}.bp-grid{display:grid;grid-template-columns:1fr 1fr;min-height:560px}.bp-copy{padding:80px max(44px,7vw) 80px max(22px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center}.bp-copy h2{font:700 clamp(42px,4vw,62px)/1.02 var(--serif);margin:12px 0 18px}.bp-copy p{color:#d7e6df;max-width:560px}.bp-img{background:url('assets/blueprint.jpg') center/cover no-repeat;min-height:500px}.bp-copy .btn{align-self:flex-start;background:var(--gold);color:#17201c;margin-top:18px}
+.who{background:#fff}.who-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}.who-photo{min-height:500px;border-radius:var(--radius);background:url('assets/business.jpg') center/cover no-repeat;position:relative;overflow:hidden}.who-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.56))}.who-caption{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;color:#fff}.who-caption h3{font:700 38px var(--serif);margin:0 0 5px}.who-list{display:grid;gap:14px}.who-item{padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--paper);transition:.22s}.who-item:hover{transform:translateX(5px);border-color:#cdbb92}.who-item h3{font:700 24px var(--serif);margin:0 0 4px}.who-item p{margin:0;color:var(--muted);font-size:14px}
+.about{background:linear-gradient(135deg,#f5eee0,#fbfaf6)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}.tree-stage{display:grid;place-items:center;min-height:430px}.tree-stage svg{width:min(390px,90%);filter:drop-shadow(0 20px 30px rgba(17,55,43,.14))}.about-copy h2{font:700 clamp(42px,4vw,58px)/1.04 var(--serif);margin:10px 0 16px}.about-copy p{color:var(--muted);font-size:17px}.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.pillar{padding:17px;border:1px solid rgba(11,58,46,.14);border-radius:12px;background:rgba(255,255,255,.65)}.pillar b{display:block;color:var(--green);margin-bottom:4px}.pillar span{font-size:13px;color:var(--muted)}
+.cta-band{background:linear-gradient(rgba(5,36,27,.86),rgba(5,36,27,.86)),url('assets/family.jpg') center 35%/cover;color:#fff;text-align:center}.cta-band .wrap{max-width:850px}.cta-band h2{font:700 clamp(42px,4.5vw,60px)/1.05 var(--serif);margin:10px 0 16px}.cta-band p{color:#e0ece7;font-size:17px}.cta-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}.cta-band .btn-primary{background:var(--gold);color:#17201c}.cta-band .btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.footer{background:#082e25;color:#dce7e2;padding:50px 0 28px}.footer-grid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:34px}.footer h4{color:#fff;margin:0 0 11px}.footer a{display:block;font-size:13px;color:#c9d9d2;margin:7px 0}.footer a:hover{color:var(--gold2)}.foot-brand{font:700 25px var(--serif);color:#fff}.foot-note{font-size:12px;color:#aebfb7;max-width:390px}.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:18px;font-size:11px;color:#9fb2aa}
+.modal{position:fixed;inset:0;background:rgba(3,16,12,.72);display:none;align-items:center;justify-content:center;z-index:1000;padding:24px}.modal.open{display:flex}.modal-card{width:min(700px,100%);max-height:88vh;overflow:auto;background:var(--paper);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.28);padding:36px;position:relative}.modal-close{position:absolute;top:14px;right:16px;border:0;background:#eee8dd;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}.modal h3{font:700 38px var(--serif);margin:6px 0 10px}.modal p{color:var(--muted)}.modal ul{color:#3e4944;line-height:1.8}.modal .btn{margin-top:10px}
+.mobile-menu{display:none;background:none;border:none;font-size:25px;color:var(--green)}
+@media(max-width:980px){.navlinks{display:none}.mobile-menu{display:block}.nav>.btn{display:none}.hero{background:linear-gradient(180deg,rgba(246,242,233,.95) 0 58%,rgba(246,242,233,.10) 82%),url('assets/hero.jpg') center bottom/cover no-repeat;min-height:790px;align-items:flex-start}.hero-copy{padding-top:82px}.goal-grid{grid-template-columns:repeat(2,1fr)}.help-grid{grid-template-columns:repeat(2,1fr)}.bp-grid,.who-grid,.about-grid{grid-template-columns:1fr}.bp-copy{padding:70px 7vw}.who-photo{min-height:420px}.footer-grid{grid-template-columns:1fr 1fr}.steps{gap:18px}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,1180px)}section{padding:68px 0}.hero{min-height:720px}.hero h1{font-size:45px}.goal-grid,.help-grid,.pillars,.footer-grid{grid-template-columns:1fr}.goal-img{height:205px}.steps{grid-template-columns:1fr}.steps:before{left:28px;top:0;bottom:0;width:1px;height:auto}.step{padding-left:82px;min-height:130px}.step-no{position:absolute;left:0;top:0}.bp-img{min-height:360px}.nav{min-height:68px}.brand-name{font-size:17px}.brand svg{width:38px;height:38px}.modal-card{padding:28px 22px}.who-photo{min-height:360px}}
+
+/* Heritage V2 — established brand + harvest / roots palette */
+.header{
+  background:rgba(33,21,15,.96);
+  border-bottom:1px solid rgba(240,206,115,.18);
+  box-shadow:0 8px 30px rgba(33,21,15,.16);
+}
+.nav{min-height:94px}
+.brand-logo{
+  width:154px;height:78px;object-fit:cover;object-position:center;border-radius:5px;
+  box-shadow:0 7px 20px rgba(0,0,0,.2);
+}
+.navlinks{color:#f8ead7}
+.navlinks a:after{background:var(--gold2)}
+.navlinks a:hover{color:var(--gold2)}
+.header .btn-primary{background:linear-gradient(135deg,var(--harvest),var(--clay));color:#fff8ec}
+.header .mobile-menu{color:var(--gold2)}
+.btn-primary{background:linear-gradient(135deg,var(--green),var(--green2));}
+.btn-primary:hover{background:linear-gradient(135deg,var(--clay),var(--harvest))}
+.hero{
+  background:
+    linear-gradient(90deg,rgba(246,234,217,.98) 0 42%,rgba(246,234,217,.83) 54%,rgba(246,234,217,.08) 78%),
+    url('assets/hero.jpg') center right/cover no-repeat;
+}
+.hero h1 em{color:var(--clay)}
+.eyebrow,.kicker{color:var(--clay)}
+.goal:hover{border-color:var(--harvest)}
+.goal:nth-child(3n+1){box-shadow:inset 0 4px 0 var(--green)}
+.goal:nth-child(3n+2){box-shadow:inset 0 4px 0 var(--harvest)}
+.goal:nth-child(3n){box-shadow:inset 0 4px 0 var(--clay)}
+.process{background:linear-gradient(135deg,#f4e4cf,#f8f0e3)}
+.step-no{background:linear-gradient(135deg,var(--green),var(--leaf))}
+.help-card:nth-child(1){border-top-color:var(--green)}
+.help-card:nth-child(2){border-top-color:var(--harvest)}
+.help-card:nth-child(3){border-top-color:var(--clay)}
+.help-card:nth-child(4){border-top-color:var(--leaf)}
+.blueprint{background:linear-gradient(135deg,var(--green3),#2d4b32)}
+.bp-copy .btn{background:linear-gradient(135deg,var(--gold2),var(--harvest));color:var(--root)}
+.about{background:linear-gradient(135deg,#f1dfc5,#fff8ee 55%,#ece3cf)}
+.about-logo{
+  width:min(520px,100%);border-radius:22px;
+  box-shadow:0 28px 60px rgba(43,26,16,.22);
+}
+.cta-band{
+  background:
+    linear-gradient(rgba(38,29,17,.80),rgba(36,62,42,.80)),
+    url('assets/family.jpg') center 35%/cover;
+}
+.footer{
+  background:
+    radial-gradient(circle at 10% 0%,rgba(185,107,67,.18),transparent 32%),
+    linear-gradient(145deg,#1d120d,#2a1a12 50%,#17382a);
+  color:#efe5d8;
+}
+.footer-top{display:grid;grid-template-columns:1.7fr repeat(3,1fr);gap:34px;align-items:start}
+.footer-logo{width:230px;max-width:100%;border-radius:10px;box-shadow:0 16px 38px rgba(0,0,0,.28);margin-bottom:15px}
+.footer h4{color:var(--gold2)}
+.footer a{color:#e2d5c5}
+.footer a:hover{color:var(--gold2)}
+.foot-note{color:#cbbbaa}
+.wealth-footer{
+  margin-top:40px;padding:30px;border:1px solid rgba(240,206,115,.22);border-radius:18px;
+  background:linear-gradient(135deg,rgba(116,135,68,.13),rgba(213,142,63,.09));
+}
+.footer-kicker{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--gold2)}
+.wealth-copy{display:grid;grid-template-columns:auto 1fr;gap:18px 28px;align-items:end}
+.wealth-copy .footer-kicker{grid-column:1/-1}
+.wealth-copy h3{font:700 34px/1 var(--serif);margin:0;color:#fff}
+.wealth-copy p{margin:0;color:#cdbdac;max-width:680px}
+.wealth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.wealth-chip{
+  display:flex;gap:10px;align-items:center;padding:13px 14px;border-radius:11px;
+  background:rgba(255,250,242,.07);border:1px solid rgba(255,255,255,.08);
+  transition:.2s ease
+}
+.wealth-chip:hover{transform:translateY(-3px);background:rgba(213,142,63,.12);border-color:rgba(240,206,115,.24)}
+.wealth-chip b{color:var(--gold2);font-size:11px}.wealth-chip span{font-size:12px;color:#f1e6d8}
+.wealth-guide-btn{
+  margin-top:18px;border:0;border-radius:9px;padding:12px 16px;cursor:pointer;font-weight:800;
+  background:linear-gradient(135deg,var(--harvest),var(--clay));color:#fff;
+}
+.wealth-disclosure{font-size:10px;line-height:1.5;color:#a99a8b;margin:14px 0 0}
+.guide-modal{
+  position:fixed;inset:0;background:rgba(18,11,8,.86);display:none;align-items:center;justify-content:center;
+  z-index:1200;padding:20px
+}
+.guide-modal.open{display:flex}
+.guide-card{position:relative;width:min(1050px,95vw);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;padding:12px}
+.guide-card img{width:100%;height:auto;border-radius:10px}
+.guide-close{
+  position:sticky;float:right;top:8px;right:8px;z-index:2;width:40px;height:40px;border:0;border-radius:50%;
+  background:var(--root);color:#fff;font-size:24px;cursor:pointer
+}
+@media(max-width:980px){
+  .footer-top{grid-template-columns:1fr 1fr}
+  .wealth-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-logo{width:128px;height:66px}
+  .nav{min-height:78px}
+}
+@media(max-width:620px){
+  .footer-top,.wealth-copy,.wealth-grid{grid-template-columns:1fr}
+  .brand-logo{width:112px;height:58px}
+  .nav{min-height:70px}
+  .wealth-footer{padding:22px 18px}
+}
+
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap nav">
+<a class="brand" href="#top" aria-label="Heritage Protection Solutions home">
+<img class="brand-logo" src="assets/heritage-brand-logo.png" alt="Heritage Protection — Guardian of Generational Wealth">
+</a>
+<nav class="navlinks"><a href="#goals">How We Help</a><a href="#who">Who We Help</a><a href="#about">About Heritage</a><a href="#blueprint">Blueprint</a></nav>
+<a class="btn btn-primary" href="https://calendly.com/aaron-duchane/15-min-introductory" target="_blank">Book a Clarity Session →</a><button class="mobile-menu" aria-label="Menu" onclick="document.getElementById('goals').scrollIntoView()">☰</button>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-copy"><div class="eyebrow">Financial clarity for what matters most</div><h1>Protect What You’ve Built.<br><em>Prepare What Comes Next.</em></h1><p>Heritage helps families and business owners protect income, prepare for retirement, preserve legacy, and make informed financial decisions with confidence.</p><div class="hero-actions"><a class="btn btn-primary" href="https://calendly.com/aaron-duchane/15-min-introductory" target="_blank">Book a Clarity Session →</a><a class="btn btn-light" href="#goals">See How We Help</a></div><div class="trustline"><span>Education first</span><span>Family centered</span><span>Built for the long term</span></div></div></div></section>
+<section id="goals" class="goals"><div class="wrap"><div class="section-head center"><div class="kicker">Start with the goal</div><h2>What are you trying to accomplish?</h2><p>You don’t need to know which financial product you need. Start with what matters most to you.</p></div>
+<div class="goal-grid">
+<article class="goal"><div class="goal-img" style="background-image:url('assets/family.jpg')"></div><div class="goal-body"><h3>Protect My Family</h3><p>Prepare for the responsibilities your family depends on if life changes unexpectedly.</p><button class="explore" data-topic="family">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('assets/retirement.jpg')"></div><div class="goal-body"><h3>Prepare for Retirement</h3><p>Build toward income, flexibility, and greater confidence in the years ahead.</p><button class="explore" data-topic="retirement">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('assets/clarity.jpg')"></div><div class="goal-body"><h3>Get Financial Clarity</h3><p>See what’s working, what may be missing, and what deserves attention next.</p><button class="explore" data-topic="clarity">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('assets/children.jpg')"></div><div class="goal-body"><h3>Give My Children a Stronger Start</h3><p>Prepare resources, opportunities, and financial foundations for the next generation.</p><button class="explore" data-topic="children">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('assets/legacy.jpg')"></div><div class="goal-body"><h3>Protect What I’ve Built</h3><p>Prepare how assets, wishes, and responsibilities carry forward.</p><button class="explore" data-topic="legacy">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('assets/business.jpg')"></div><div class="goal-body"><h3>Protect My Business</h3><p>Plan for continuity, succession, ownership transition, and the people who depend on it.</p><button class="explore" data-topic="business">Explore →</button></div></article>
+</div></div></section>
+<section class="process"><div class="wrap"><div class="section-head"><div class="kicker">The Heritage Process</div><h2>Clarity before strategy.</h2><p>A financial decision should make sense before you’re asked to make it.</p></div><div class="steps"><div class="step"><div class="step-no">01</div><h3>Understand</h3><p>We start with your family, responsibilities, goals, concerns, and what you already have in place.</p></div><div class="step"><div class="step-no">02</div><h3>Design</h3><p>We evaluate strategies and options around your situation instead of forcing you into a predetermined solution.</p></div><div class="step"><div class="step-no">03</div><h3>Protect & Review</h3><p>Once implemented, the conversation continues as your family, business, and goals change.</p></div></div></div></section>
+<section><div class="wrap"><div class="section-head center"><div class="kicker">How We Help</div><h2>One financial life. Four areas of preparation.</h2></div><div class="help-grid"><div class="help-card"><h3>Protect</h3><p>Prepare for events that could interrupt the life you’ve built.</p><ul><li>Life insurance</li><li>Living benefits</li><li>Income & mortgage protection</li><li>Final expense</li></ul></div><div class="help-card"><h3>Prepare</h3><p>Build toward the future you’re working for.</p><ul><li>Retirement strategies</li><li>Supplemental income</li><li>Children & education strategies</li><li>Debt strategy</li></ul></div><div class="help-card"><h3>Preserve</h3><p>Prepare your wishes and assets to carry forward.</p><ul><li>Estate planning</li><li>Wills & trusts</li><li>POA & medical directives</li><li>Legacy planning</li></ul></div><div class="help-card"><h3>Continue</h3><p>Help the business survive beyond the owner.</p><ul><li>Business protection</li><li>Succession planning</li><li>Key-person strategies</li><li>Continuity planning</li></ul></div></div></div></section>
+<section id="blueprint" class="blueprint"><div class="bp-grid"><div class="bp-copy"><div class="kicker">The Heritage Blueprint</div><h2>Know where you stand before deciding where to go.</h2><p>A guided financial snapshot built to help identify what is working, what may be missing, and what questions deserve attention next.</p><a class="btn" href="https://www.heritageprosolutions.com/the-heritage-blueprint" target="_blank">Open the Heritage Blueprint →</a></div><div class="bp-img"></div></div></section>
+<section id="who" class="who"><div class="wrap"><div class="section-head"><div class="kicker">Who We Help</div><h2>Financial strategy should fit real life.</h2></div><div class="who-grid"><div class="who-photo"><div class="who-caption"><h3>People first.</h3><div>Families, owners, professionals, and the communities they build.</div></div></div><div class="who-list"><div class="who-item"><h3>Families</h3><p>Working families balancing today’s responsibilities with tomorrow’s goals.</p></div><div class="who-item"><h3>Business Owners</h3><p>Owners whose personal finances, business responsibilities, employees, and families are often interconnected.</p></div><div class="who-item"><h3>Industry Communities</h3><p>Construction, facilities, trucking, healthcare and caregiving, gaming, education, service professionals, veterans, and entrepreneurs.</p></div></div></div></div></section>
+<section id="about" class="about"><div class="wrap about-grid"><div class="tree-stage"><img class="about-logo" src="assets/heritage-brand-logo.png" alt="Heritage Protection brand crest"></div><div class="about-copy"><div class="kicker">About Heritage</div><h2>Family Built. Legacy Focused.</h2><p>Heritage Protection Solutions was built around a simple belief: what we build should leave the people who come after us better prepared than we found them.</p><p>We lead with education, clarity, and long-term relationships so families and business owners can make informed decisions with confidence.</p><div class="pillars"><div class="pillar"><b>Education Before Decisions</b><span>Understand the why before choosing the how.</span></div><div class="pillar"><b>People Before Products</b><span>Your goals and responsibilities come first.</span></div><div class="pillar"><b>Choice & Perspective</b><span>Evaluate strategies instead of beginning with only one answer.</span></div><div class="pillar"><b>Review as Life Changes</b><span>A plan should evolve with the people it protects.</span></div></div></div></div></section>
+<section class="cta-band"><div class="wrap"><div class="kicker">Your next step can be simple</div><h2>You don’t need to have everything figured out before we talk.</h2><p>Start with where you are. We’ll help you understand what deserves attention next.</p><div class="cta-buttons"><a class="btn btn-primary" href="https://calendly.com/aaron-duchane/15-min-introductory" target="_blank">Book a Clarity Session →</a><a class="btn btn-light" href="https://calendly.com/aaron-duchane/complimentary-financial-needs-analysis" target="_blank">Already a Client? Schedule a Review</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap">
+<div class="footer-top">
+  <div class="footer-brand-block">
+    <img class="footer-logo" src="assets/heritage-brand-logo.png" alt="Heritage Protection">
+    <p class="foot-note">Helping families and business owners protect today, prepare for tomorrow, and build something worth passing on.</p>
+  </div>
+  <div><h4>How We Help</h4><a href="#goals">Family Protection</a><a href="#goals">Retirement</a><a href="#goals">Legacy</a><a href="#goals">Business</a></div>
+  <div><h4>Heritage</h4><a href="#about">Our Approach</a><a href="#who">Who We Help</a><a href="#blueprint">Blueprint</a></div>
+  <div><h4>Get Started</h4><a href="https://calendly.com/aaron-duchane/15-min-introductory" target="_blank">Clarity Session</a><a href="https://calendly.com/aaron-duchane/complimentary-financial-needs-analysis" target="_blank">Client Review</a></div>
+</div>
+
+<div class="wealth-footer">
+  <div class="wealth-copy">
+    <div class="footer-kicker">HERITAGE • 8 WEALTH BUILDING CATEGORIES</div>
+    <h3>Build from the roots up.</h3>
+    <p>We use eight lenses to help families compare how financial tools may fit into a broader strategy.</p>
+  </div>
+  <div class="wealth-grid">
+    <div class="wealth-chip"><b>01</b><span>Tax Exempt Benefits</span></div>
+    <div class="wealth-chip"><b>02</b><span>Growth Potential</span></div>
+    <div class="wealth-chip"><b>03</b><span>Loss Exposure</span></div>
+    <div class="wealth-chip"><b>04</b><span>Protection / Insurance</span></div>
+    <div class="wealth-chip"><b>05</b><span>Access / Liquidity</span></div>
+    <div class="wealth-chip"><b>06</b><span>Legacy for Family</span></div>
+    <div class="wealth-chip"><b>07</b><span>Probate Considerations</span></div>
+    <div class="wealth-chip"><b>08</b><span>Living Benefits</span></div>
+  </div>
+  <button class="wealth-guide-btn" id="wealthGuideBtn">View the 8-category guide →</button>
+  <p class="wealth-disclosure">Educational overview only. Tax treatment, guarantees, insurance protection, liquidity, fees, market exposure, and other features vary by product, account type, carrier, and individual circumstances.</p>
+</div>
+
+<div class="legal">© Heritage Protection Solutions. Financial strategies and product availability may vary by state, carrier, and individual circumstances. Powered by Global Financial Impact.</div>
+</div></footer>
+
+<div class="guide-modal" id="guideModal" aria-hidden="true">
+  <div class="guide-card">
+    <button class="guide-close" aria-label="Close">×</button>
+    <img src="assets/wealth-categories.png" alt="8 Wealth Building Categories reference guide">
+  </div>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" aria-label="Close">×</button><div class="kicker">Explore</div><h3 id="modalTitle"></h3><p id="modalLead"></p><ul id="modalList"></ul><a class="btn btn-primary" href="https://calendly.com/aaron-duchane/15-min-introductory" target="_blank">Talk With Heritage →</a></div></div>
+<script>
+const topics={
+ family:{title:'Protect My Family',lead:'Protection planning begins with the responsibilities that would remain if life changed unexpectedly.',items:['Life insurance and living benefits','Income and mortgage protection','Final expense and beneficiary review','Reviewing existing coverage for potential gaps']},
+ retirement:{title:'Prepare for Retirement',lead:'Retirement planning is not only about accumulating a balance. It is also about how that money may support your life later.',items:['Retirement income strategies','Indexed and protected-growth concepts','Supplemental income planning','Reviewing risk, access, and long-term goals']},
+ clarity:{title:'Get Financial Clarity',lead:'Before adding another financial product, understand the complete picture.',items:['Financial needs analysis','Review of current protection and retirement strategies','Debt and cash-flow considerations','Identifying priorities and potential gaps']},
+ children:{title:'Give My Children a Stronger Start',lead:'Early preparation can create options for education, opportunity, and long-term financial foundations.',items:['Education and college strategies','Juvenile protection concepts','Long-term accumulation strategies','Generational preparation']},
+ legacy:{title:'Protect What I’ve Built',lead:'Legacy planning helps turn intentions into instructions and preparation.',items:['Estate planning coordination','Wills, trusts, powers of attorney, and medical directives','Beneficiary and ownership considerations','Generational wealth and legacy conversations']},
+ business:{title:'Protect My Business',lead:'When the business depends on you, business planning and personal planning often meet in the same place.',items:['Succession and continuity planning','Key-person considerations','Owner and family protection','Transition and legacy strategies']}
+};
+const modal=document.getElementById('modal');document.querySelectorAll('.explore').forEach(b=>b.addEventListener('click',()=>{let t=topics[b.dataset.topic];document.getElementById('modalTitle').textContent=t.title;document.getElementById('modalLead').textContent=t.lead;document.getElementById('modalList').innerHTML=t.items.map(x=>`<li>${x}</li>`).join('');modal.classList.add('open');modal.setAttribute('aria-hidden','false')}));
+function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')};document.querySelector('.modal-close').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+const guideModal=document.getElementById('guideModal');
+const wealthGuideBtn=document.getElementById('wealthGuideBtn');
+const guideClose=document.querySelector('.guide-close');
+if(wealthGuideBtn) wealthGuideBtn.addEventListener('click',()=>{guideModal.classList.add('open');guideModal.setAttribute('aria-hidden','false')});
+function closeGuide(){if(!guideModal)return;guideModal.classList.remove('open');guideModal.setAttribute('aria-hidden','true')}
+if(guideClose) guideClose.addEventListener('click',closeGuide);
+if(guideModal) guideModal.addEventListener('click',e=>{if(e.target===guideModal)closeGuide()});
+
+</script>
+</body></html>
