@@ -1,43 +1,32 @@
-HERITAGE LANDING V4 — CACHE-BUSTED WIX/GITHUB DEPLOYMENT
+HERITAGE LANDING V5 — WIX INTERACTION FIX
 
-FIRST: RESTORE THE LIVE SITE
-1. In Wix Pages, set your previous working page (Clarity Consult / old Home) back as Home.
-2. Publish.
-3. Open the public site in an incognito/private window and confirm it loads.
+WHAT THIS VERSION FIXES
+1. Explore buttons no longer open a centered modal somewhere in the middle of the tall page.
+   They now expand inline directly under the card you clicked.
 
-DO NOT DELETE the new Landing Page.
+2. The 8 Wealth Building Categories guide no longer opens as a page-wide modal.
+   It now expands inline immediately below the wealth teaser.
 
-THEN TEST V4 SAFELY
-1. Upload heritage-landing-v4.js to the ROOT of the GitHub repo:
-   metahero350-byte/Heritageprosolutions
+3. Blueprint uses forced browser navigation to:
+   https://www.heritageprosolutions.com/the-heritage-blueprint
 
-2. Confirm GitHub Pages serves:
-   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v4.js
+4. New-client Calendly uses forced browser navigation:
+   https://calendly.com/aaron-duchane/15-min-introductory
 
-3. On the hidden/new Landing Page in Wix, select the Custom Element.
+5. Existing-client Calendly uses forced browser navigation:
+   https://calendly.com/aaron-duchane/complimentary-financial-needs-analysis
 
-4. Choose Source > Server URL:
-   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v4.js
+DEPLOY
+1. Upload heritage-landing-v5.js to the ROOT of your GitHub repo.
+2. Confirm this URL loads:
+   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v5.js
+3. In Wix, on the hidden Landing Page Custom Element:
+   Server URL:
+   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v5.js
+   Tag:
+   heritage-landing-v5
+4. Save.
+5. Test the hidden page.
+6. Hard refresh with Ctrl+Shift+R if needed.
 
-5. Change tag name to:
-   heritage-landing-v4
-
-6. Save.
-
-7. Test ONLY the hidden Landing Page first.
-   Hard refresh with Ctrl+Shift+R or use an incognito/private window.
-
-8. Confirm:
-   - Full landing page loads
-   - New wealth-category placement appears before Blueprint
-   - Explore modals work
-   - 8 Wealth Building guide opens correctly
-   - Calendly links work
-   - Desktop/mobile layout looks right
-
-9. ONLY AFTER THAT:
-   Set the new Landing Page as Home and publish again.
-
-WHY V4
-The new filename and custom-element tag avoid stale GitHub Pages/browser/Wix caching
-and avoid reusing an already-registered custom element name.
+DO NOT SET IT AS HOME until these five interactions pass.
