@@ -1,24 +1,43 @@
-HERITAGE V3 — CLEAN WEALTH CATEGORIES PLACEMENT
+HERITAGE LANDING V4 — CACHE-BUSTED WIX/GITHUB DEPLOYMENT
 
-WHAT CHANGED
-- Removed the large 8 Wealth Building Categories block from the footer.
-- Added a compact teaser directly before The Heritage Blueprint.
-- Footer now has one simple "8 Wealth Building Categories" link under Heritage.
-- Both the teaser button and footer link open the existing full guide modal.
+FIRST: RESTORE THE LIVE SITE
+1. In Wix Pages, set your previous working page (Clarity Consult / old Home) back as Home.
+2. Publish.
+3. Open the public site in an incognito/private window and confirm it loads.
 
-DEPLOY
-1. In GitHub, open your Heritageprosolutions repository.
-2. Replace the existing root file:
-   heritage-landing.js
-   with the new heritage-landing.js in this ZIP.
-3. Commit the change.
-4. Wait 1–3 minutes for GitHub Pages to update.
-5. Hard-refresh your Wix test page:
-   Ctrl + Shift + R
+DO NOT DELETE the new Landing Page.
 
-WIX DOES NOT NEED TO CHANGE
-Server URL remains:
-https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing.js
+THEN TEST V4 SAFELY
+1. Upload heritage-landing-v4.js to the ROOT of the GitHub repo:
+   metahero350-byte/Heritageprosolutions
 
-Tag remains:
-heritage-landing
+2. Confirm GitHub Pages serves:
+   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v4.js
+
+3. On the hidden/new Landing Page in Wix, select the Custom Element.
+
+4. Choose Source > Server URL:
+   https://metahero350-byte.github.io/Heritageprosolutions/heritage-landing-v4.js
+
+5. Change tag name to:
+   heritage-landing-v4
+
+6. Save.
+
+7. Test ONLY the hidden Landing Page first.
+   Hard refresh with Ctrl+Shift+R or use an incognito/private window.
+
+8. Confirm:
+   - Full landing page loads
+   - New wealth-category placement appears before Blueprint
+   - Explore modals work
+   - 8 Wealth Building guide opens correctly
+   - Calendly links work
+   - Desktop/mobile layout looks right
+
+9. ONLY AFTER THAT:
+   Set the new Landing Page as Home and publish again.
+
+WHY V4
+The new filename and custom-element tag avoid stale GitHub Pages/browser/Wix caching
+and avoid reusing an already-registered custom element name.
