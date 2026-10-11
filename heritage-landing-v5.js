@@ -326,10 +326,10 @@ heritage-landing-v5 .wealth-guide-inline img{
 <article class="goal"><div class="goal-img" style="background-image:url('https://static.wixstatic.com/media/51145d_0d1443bf4d9c47719dfe13b5ac6cec17~mv2.png')"></div><div class="goal-body"><h3>Get Financial Clarity</h3><p>See what’s working, what may be missing, and what deserves attention next.</p><button class="explore" data-topic="clarity">Explore →</button></div></article>
 <article class="goal"><div class="goal-img" style="background-image:url('https://static.wixstatic.com/media/51145d_90efa87fd1bd4f51a03740e4f5b1ffe0~mv2.png')"></div><div class="goal-body"><h3>Give My Children a Stronger Start</h3><p>Prepare resources, opportunities, and financial foundations for the next generation.</p><button class="explore" data-topic="children">Explore →</button></div></article>
 <article class="goal"><div class="goal-img" style="background-image:url('https://static.wixstatic.com/media/51145d_ad989a9e3ac94af2a193d8c57e182a51~mv2.png')"></div><div class="goal-body"><h3>Protect What I’ve Built</h3><p>Prepare how assets, wishes, and responsibilities carry forward.</p><button class="explore" data-topic="legacy">Explore →</button></div></article>
-<article class="goal"><div class="goal-img" style="background-image:url('https://static.wixstatic.com/media/51145d_8564a36210fa44c5b2c74654f343a120~mv2.png')"></div><div class="goal-body"><h3>Protect My Business</h3><p>Plan for continuity, succession, ownership transition, and the people who depend on it.</p><button class="explore" data-topic="business">Explore →</button></div></article>
+<article class="goal"><div class="goal-img" style="background-image:url('https://static.wixstatic.com/media/51145d_8564a36210fa44c5b2c74654f343a120~mv2.png')"></div><div class="goal-body"><h3>Protect My Business</h3><p>Prepare for continuity, succession, ownership transition, and the people who depend on it.</p><button class="explore" data-topic="business">Explore →</button></div></article>
 </div></div></section>
 <section class="process"><div class="wrap"><div class="section-head"><div class="kicker">The Heritage Process</div><h2>Clarity before strategy.</h2><p>A financial decision should make sense before you’re asked to make it.</p></div><div class="steps"><div class="step"><div class="step-no">01</div><h3>Understand</h3><p>We start with your family, responsibilities, goals, concerns, and what you already have in place.</p></div><div class="step"><div class="step-no">02</div><h3>Design</h3><p>We evaluate strategies and options around your situation instead of forcing you into a predetermined solution.</p></div><div class="step"><div class="step-no">03</div><h3>Protect & Review</h3><p>Once implemented, the conversation continues as your family, business, and goals change.</p></div></div></div></section>
-<section><div class="wrap"><div class="section-head center"><div class="kicker">How We Help</div><h2>One financial life. Four areas of preparation.</h2></div><div class="help-grid"><div class="help-card"><h3>Protect</h3><p>Prepare for events that could interrupt the life you’ve built.</p><ul><li>Life insurance</li><li>Living benefits</li><li>Income & mortgage protection</li><li>Final expense</li></ul></div><div class="help-card"><h3>Prepare</h3><p>Build toward the future you’re working for.</p><ul><li>Retirement strategies</li><li>Supplemental income</li><li>Children & education strategies</li><li>Debt strategy</li></ul></div><div class="help-card"><h3>Preserve</h3><p>Prepare your wishes and assets to carry forward.</p><ul><li>Estate planning</li><li>Wills & trusts</li><li>POA & medical directives</li><li>Legacy planning</li></ul></div><div class="help-card"><h3>Continue</h3><p>Help the business survive beyond the owner.</p><ul><li>Business protection</li><li>Succession planning</li><li>Key-person strategies</li><li>Continuity planning</li></ul></div></div></div></section>
+<section><div class="wrap"><div class="section-head center"><div class="kicker">How We Help</div><h2>One financial life. Four areas of preparation.</h2></div><div class="help-grid"><div class="help-card"><h3>Protect</h3><p>Prepare for events that could interrupt the life you’ve built.</p><ul><li>Life insurance</li><li>Living benefits</li><li>Income & mortgage protection</li><li>Final expense</li></ul></div><div class="help-card"><h3>Prepare</h3><p>Build toward the future you’re working for.</p><ul><li>Retirement strategies</li><li>Supplemental income</li><li>Children & education strategies</li><li>Debt protection</li></ul></div><div class="help-card"><h3>Preserve</h3><p>Prepare your wishes and assets to carry forward.</p><ul><li>Beneficiary & ownership review</li><li>Legacy protection</li><li>Wills, trusts & POA through partner attorneys</li><li>Final wishes conversations</li></ul></div><div class="help-card"><h3>Continue</h3><p>Help the business survive beyond the owner.</p><ul><li>Business protection</li><li>Succession funding</li><li>Key-person strategies</li><li>Continuity protection</li></ul></div></div></div></section>
 
 <section id="wealth-building" class="wealth-teaser">
   <div class="wrap">
@@ -461,13 +461,13 @@ heritage-landing-v5 .wealth-guide-inline img{
     const topics = {
       family: {
         title:'Protect My Family',
-        lead:'Protection planning begins with the responsibilities that would remain if life changed unexpectedly.',
+        lead:'Protection starts with the responsibilities that would remain if life changed unexpectedly.',
         items:['Life insurance and living benefits','Income and mortgage protection','Final expense and beneficiary review','Reviewing existing coverage for potential gaps']
       },
       retirement: {
         title:'Prepare for Retirement',
-        lead:'Retirement planning is not only about accumulating a balance. It is also about how that money may support your life later.',
-        items:['Retirement income strategies','Indexed and protected-growth concepts','Supplemental income planning','Reviewing risk, access, and long-term goals']
+        lead:'Preparing for retirement is not only about accumulating a balance. It is also about how that money may support your life later.',
+        items:['Retirement income strategies','Indexed and fixed annuity concepts','Supplemental income options','Reviewing risk, access, and long-term goals']
       },
       clarity: {
         title:'Get Financial Clarity',
@@ -481,13 +481,13 @@ heritage-landing-v5 .wealth-guide-inline img{
       },
       legacy: {
         title:'Protect What I’ve Built',
-        lead:'Legacy planning helps turn intentions into instructions and preparation.',
-        items:['Estate planning coordination','Wills, trusts, powers of attorney, and medical directives','Beneficiary and ownership considerations','Generational wealth and legacy conversations']
+        lead:'Legacy preparation helps turn intentions into instructions and preparation.',
+        items:['Coordination with your estate attorney','Wills, trusts, and POA through partner attorneys','Beneficiary and ownership considerations','Generational legacy conversations']
       },
       business: {
         title:'Protect My Business',
-        lead:'When the business depends on you, business planning and personal planning often meet in the same place.',
-        items:['Succession and continuity planning','Key-person considerations','Owner and family protection','Transition and legacy strategies']
+        lead:'When the business depends on you, business protection and family protection often meet in the same place.',
+        items:['Succession and continuity funding','Key-person considerations','Owner and family protection','Transition and legacy strategies']
       }
     };
 
