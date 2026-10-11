@@ -15,7 +15,7 @@ heritage-landing-v5{
  --ivory:#f6ead9;--paper:#fffaf2;--ink:#261b14;--muted:#75675c;--line:#dfcdb8;
  --shadow:0 18px 48px rgba(22,42,33,.12);--radius:22px;--serif:Georgia,"Times New Roman",serif;
 }
-heritage-landing-v5 *{box-sizing:border-box} heritage-landing-v5{scroll-behavior:smooth} heritage-landing-v5{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
+heritage-landing-v5 *{box-sizing:border-box} heritage-landing-v5{display:block;min-height:0 !important;height:auto !important} heritage-landing-v5{scroll-behavior:smooth} heritage-landing-v5{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
 heritage-landing-v5 a{text-decoration:none;color:inherit} heritage-landing-v5 button{font:inherit} heritage-landing-v5 img{display:block;max-width:100%}heritage-landing-v5 .wrap{width:min(1180px,calc(100% - 44px));margin:auto}
 heritage-landing-v5 .header{position:sticky;top:0;z-index:100;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,58,46,.08)}
 heritage-landing-v5 .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}heritage-landing-v5 .brand{display:flex;align-items:center;gap:13px}heritage-landing-v5 .brand svg{width:45px;height:45px}heritage-landing-v5 .brand-name{font-family:var(--serif);font-size:20px;letter-spacing:.04em;line-height:1}heritage-landing-v5 .brand-name small{font-family:Arial,sans-serif;font-size:9px;display:block;letter-spacing:.22em;margin-top:5px;color:var(--muted)}
