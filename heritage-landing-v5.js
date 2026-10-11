@@ -66,6 +66,11 @@ heritage-landing-v5 .bp-note{font-size:12px;color:var(--muted);line-height:1.5;m
 /* Readable body text: one size for all supporting copy (footer and section labels excluded) */
 heritage-landing-v5 .goal-body p,heritage-landing-v5 .step p,heritage-landing-v5 .help-card p,heritage-landing-v5 .help-card li,heritage-landing-v5 #wealth-building p,heritage-landing-v5 .bp-copy p,heritage-landing-v5 .who-caption,heritage-landing-v5 .who-item p,heritage-landing-v5 .pillar b,heritage-landing-v5 .pillar span,heritage-landing-v5 .about-copy p{font-size:17px !important;line-height:1.6 !important}
 heritage-landing-v5 .trustline span,heritage-landing-v5 .wealth-lenses span{font-size:15px !important}
+heritage-landing-v5 .wg-copy li,heritage-landing-v5 .wg-copy li b{font-size:17px !important;line-height:1.6 !important}
+heritage-landing-v5 .wg-note{font-size:14px !important;color:#5d5248 !important}
+heritage-landing-v5 .bp-field span,heritage-landing-v5 .bp-row div,heritage-landing-v5 .bp-row p,heritage-landing-v5 .bp-lead{font-size:16px !important}
+heritage-landing-v5 .bp-buckets div{font-size:14px !important}
+heritage-landing-v5 .bp-note{font-size:13px !important}
 heritage-landing-v5 section .btn,heritage-landing-v5 .hero-actions a.btn,heritage-landing-v5 .cta-buttons a.btn,heritage-landing-v5 .bp-copy .btn{font-size:16px !important}
 heritage-landing-v5 .modal{position:fixed;inset:0;background:rgba(3,16,12,.72);display:none;align-items:center;justify-content:center;z-index:1000;padding:24px}heritage-landing-v5 .modal.open{display:flex}heritage-landing-v5 .modal-card{width:min(700px,100%);max-height:88vh;overflow:auto;background:var(--paper);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.28);padding:36px;position:relative}heritage-landing-v5 .modal-close{position:absolute;top:14px;right:16px;border:0;background:#eee8dd;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}heritage-landing-v5 .modal h3{font:700 38px var(--serif);margin:6px 0 10px}heritage-landing-v5 .modal p{color:var(--muted)}heritage-landing-v5 .modal ul{color:#3e4944;line-height:1.8}heritage-landing-v5 .modal .btn{margin-top:10px}
 heritage-landing-v5 .mobile-menu{display:none;background:none;border:none;font-size:25px;color:var(--green)}
