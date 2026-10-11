@@ -295,6 +295,14 @@ heritage-landing-v5 .inline-close{
   cursor:pointer;
   padding:0;
 }
+heritage-landing-v5 .wealth-guide-inline .wg-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:start}
+heritage-landing-v5 .wealth-guide-inline .wg-grid img{width:auto;max-width:100%;max-height:min(78vh,760px);margin:0 auto;border-radius:10px;box-shadow:0 12px 30px rgba(43,29,20,.12)}
+heritage-landing-v5 .wg-copy h4{margin:0 0 10px;font:700 24px/1.15 var(--serif);color:#244d37}
+heritage-landing-v5 .wg-copy ol{margin:0 0 12px;padding-left:20px;color:#3f3a34}
+heritage-landing-v5 .wg-copy li{margin:0 0 10px;line-height:1.5}
+heritage-landing-v5 .wg-note{font-size:12px;color:#75675c;margin:0 0 14px}
+@media (max-width:820px){heritage-landing-v5 .wealth-guide-inline .wg-grid{grid-template-columns:1fr}heritage-landing-v5 .wealth-guide-inline .wg-grid img{max-height:none;width:100%}}
+heritage-landing-v5 .guide-card{max-width:820px}
 heritage-landing-v5 .wealth-guide-inline{
   display:none;
   margin-top:22px;
@@ -561,7 +569,19 @@ heritage-landing-v5 .wealth-guide-inline img{
           inlineGuide = document.createElement('div');
           inlineGuide.className = 'wealth-guide-inline open';
           inlineGuide.innerHTML = `
-            <img src="${guideImage.getAttribute('src')}" alt="8 Wealth Building Categories guide">
+            <div class="wg-grid">
+              <div class="wg-copy">
+                <h4>How to read the 8 lenses</h4>
+                <ol>
+                  <li><b>Pick what matters to you.</b> Tax-exempt benefits, growth, no risk of loss, protection, access, legacy, probate avoidance, living benefits.</li>
+                  <li><b>Find where your money sits today.</b> Bank, 401(k)/IRA, or Roth. Each column shows which benefits that option offers.</li>
+                  <li><b>Compare the gap.</b> Most families want most or all eight. That is usually where a Fixed Indexed Annuity (FIA) or Indexed Universal Life (IUL) enters the conversation.</li>
+                </ol>
+                <p class="wg-note">Educational overview only. Features vary by product, carrier, and your situation.</p>
+                <a class="btn btn-primary" href="https://calendly.com/aaron-duchane/clarity-session-overview" target="_blank" rel="noopener">Review my lenses with Aaron →</a>
+              </div>
+              <img src="${guideImage.getAttribute('src')}" alt="8 Wealth Building Categories guide comparing bank, 401(k)/IRA, Roth IRA, FIA and IUL">
+            </div>
             <button class="inline-close" type="button">Close guide ↑</button>
           `;
           teaser.querySelector('.wealth-teaser-card').insertAdjacentElement('afterend', inlineGuide);
