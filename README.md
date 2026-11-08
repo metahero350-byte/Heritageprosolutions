@@ -26,3 +26,14 @@ Heritage DNS until the new site and any pages you need to preserve are ready.
 - `assets/` — site imagery
 - `.nojekyll` — disables Jekyll processing
 - `404.html` — basic fallback page
+
+## Blog
+Posts live in `blog-src/` as Markdown files (one file per post, front matter at the top:
+`title`, `slug`, `date`, optional `description`, `cover`). To publish a new post:
+
+1. Add `blog-src/<slug>.md`.
+2. Run `python3 tools/build_blog.py` (needs `pip install markdown`).
+3. Commit everything. GitHub Pages publishes `post/<slug>/`, `blog/`, and `blog/posts.json`.
+
+The homepage "From the Heritage Blog" section reads `blog/posts.json` and always shows the 3 newest posts.
+Post URLs match the old Wix URLs (`/post/<slug>`), so links and search rankings carry over when the domain moves.
