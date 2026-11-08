@@ -620,11 +620,18 @@ heritage-landing-v5 .wealth-guide-inline img{
             window.scrollTo({ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' });
           };
           requestAnimationFrame(() => requestAnimationFrame(() => land(true)));
-          // Correct once more after the smooth scroll and image layout settle.
-          setTimeout(() => {
-            const off = heading.getBoundingClientRect().top - headerOffset();
-            if (Math.abs(off) > 24) land(false);
-          }, 900);
+          // After the smooth scroll has fully stopped, correct once if layout shifted.
+          let lastY = -1, still = 0, ticks = 0;
+          const settle = setInterval(() => {
+            ticks++;
+            still = (Math.abs(window.pageYOffset - lastY) < 1) ? still + 1 : 0;
+            lastY = window.pageYOffset;
+            if (still >= 3 || ticks > 40) {
+              clearInterval(settle);
+              const off = heading.getBoundingClientRect().top - headerOffset();
+              if (Math.abs(off) > 24) land(false);
+            }
+          }, 100);
         }
       });
     });
