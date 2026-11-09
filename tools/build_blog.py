@@ -96,7 +96,7 @@ def page(title, desc, canonical, body, depth, og_image="", extra_head=""):
 
 def build():
     posts = [parse(p) for p in glob.glob(os.path.join(ROOT, "blog-src", "*.md"))]
-    posts.sort(key=lambda p: p["date"], reverse=True)
+    posts.sort(key=lambda p: (p["date"], p["slug"]), reverse=True)
     md = markdown.Markdown(extensions=["extra", "sane_lists"])
     index_items = []
     for i, p in enumerate(posts):
