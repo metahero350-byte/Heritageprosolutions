@@ -64,7 +64,8 @@ def fmt_date(d):
 def page(title, desc, canonical, body, depth, og_image="", extra_head=""):
     css = "../" * depth + "blog/blog.css"
     logo = "../" * depth + "assets/heritage-logo.webp"
-    blog = "../" * depth + "blog/"
+    r = "../" * depth or "./"
+    blog = r + "blog/"
     og = f'<meta property="og:image" content="{html.escape(og_image)}">' if og_image else ""
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -78,14 +79,15 @@ def page(title, desc, canonical, body, depth, og_image="", extra_head=""):
 <link rel="stylesheet" href="{css}">{extra_head}
 </head><body>
 <header class="hdr"><div class="wrap nav">
-  <a class="brand" href="{SITE}/"><img src="{logo}" alt="Heritage Protection Solutions"></a>
-  <nav class="links"><a href="{SITE}/">Home</a><a href="{blog}">Blog</a><a href="{CLARITY}" target="_blank" rel="noopener">Clarity Session</a></nav>
+  <a class="brand" href="{r}"><img src="{logo}" alt="Heritage Protection Solutions"></a>
+  <nav class="links"><a href="{r}">Home</a><a href="{r}about-us/">About</a><a href="{r}faqs/">FAQs</a><a href="{blog}">Blog</a><a href="{r}contact/">Contact</a></nav>
   <a class="btn" href="{FORM}" target="_blank" rel="noopener">Find Your Path →</a>
 </div></header>
 {body}
 <footer class="ftr"><div class="wrap">
   <img src="{logo}" alt="Heritage Protection Solutions" class="flogo">
   <p class="tag">Guardian of Generational Wealth · <a href="tel:+1{PHONE.replace('-', '')}">{PHONE}</a></p>
+  <p class="flinks"><a href="{r}">Home</a><a href="{r}about-us/">About</a><a href="{r}about-us/#team">Our Team</a><a href="{r}faqs/">FAQs</a><a href="{r}testimonials/">Client Stories</a><a href="{blog}">Blog</a><a href="{r}contact/">Contact</a><a href="{CLARITY}" target="_blank" rel="noopener">Book a Clarity Session</a></p>
   <p class="legal">{LEGAL}</p>
 </div></footer>
 </body></html>
@@ -160,10 +162,62 @@ def build():
              "minutes": p["minutes"], "excerpt": p["desc"], "url": p["url"], "cover": p.get("cover", "")}
             for p in posts]
     json.dump(feed, open(os.path.join(ROOT, "blog", "posts.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    sm = "".join(f"<url><loc>{SITE}/post/{p['slug']}</loc><lastmod>{p['date']}</lastmod></url>" for p in posts)
-    open(os.path.join(ROOT, "sitemap-blog.xml"), "w").write(
+    pages = build_pages(md)
+    urls = [f"{SITE}/"] + [f"{SITE}/{s}" for s in pages] + [f"{SITE}/blog"] + [f"{SITE}/post/{p['slug']}" for p in posts]
+    sm = "".join(f"<url><loc>{u}</loc></url>" for u in urls)
+    open(os.path.join(ROOT, "sitemap.xml"), "w").write(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    print(f"built {len(posts)} posts")
+    open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
+    old = os.path.join(ROOT, "sitemap-blog.xml")
+    if os.path.exists(old):
+        os.remove(old)
+    print(f"built {len(posts)} posts, {len(pages)} pages, {len(REDIRECTS)} redirects")
+
+
+# Old Wix addresses that should keep working after the domain moves.
+REDIRECTS = {
+    "home": "", "team-3": "about-us/#team", "the-heritage-blueprint": "#blueprint",
+    "interactive-guide-2": "#wealth-building", "business-succession-protection": "#goals",
+    "services": "#goals", "services-5": "#goals", "items": "#goals", "inquiry-services-page": "#goals",
+}
+
+
+def build_pages(md):
+    built = []
+    for path in sorted(glob.glob(os.path.join(ROOT, "pages-src", "*.md"))):
+        p = parse(path)
+        body_md = p["body_md"].replace("(FORM)", f"({FORM})").replace('"FORM"', f'"{FORM}"') \
+            .replace('"CLARITY"', f'"{CLARITY}"') \
+            .replace('"REVIEW"', '"https://calendly.com/heritage-protection/existing-client-policy-review"')
+        md.reset()
+        body_html = md.convert(body_md)
+        body = f"""<main class="wrap post page">
+<div class="kicker">{html.escape(p['kicker'])}</div>
+<h1>{html.escape(p['heading'])}</h1>
+<article class="prose">{body_html}</article>
+<aside class="cta"><div><div class="kicker">Your next step can be simple</div>
+<h2>You don’t need to have everything figured out before we talk.</h2>
+<p>Start with where you are. We’ll help you understand what deserves attention next.</p></div>
+<div class="ctab"><a class="btn" href="{FORM}" target="_blank" rel="noopener">Find Your Path →</a>
+<a class="btn ghost" href="{CLARITY}" target="_blank" rel="noopener">Book a Clarity Session</a></div></aside>
+</main>"""
+        out = os.path.join(ROOT, p["slug"])
+        os.makedirs(out, exist_ok=True)
+        open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(
+            page(p["title"], p["description"], f"{SITE}/{p['slug']}", body, 1))
+        built.append(p["slug"])
+    for old, target in REDIRECTS.items():
+        out = os.path.join(ROOT, old)
+        os.makedirs(out, exist_ok=True)
+        rel = "../" + target
+        open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Heritage Protection Solutions</title>
+<link rel="canonical" href="{SITE}/{target}"><meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={rel}">
+<script>location.replace({json.dumps(rel)});</script></head>
+<body><p><a href="{rel}">Continue to Heritage Protection Solutions</a></p></body></html>
+""")
+    return built
 
 
 if __name__ == "__main__":
